@@ -10,18 +10,25 @@ namespace Exec_DateTime01
 	{
 		static void Main(string[] args)
 		{
+			Console.WriteLine("Q1：計算三天後 DVD 應歸還時間");
 			Demo01();
 			Console.WriteLine();
+			Console.WriteLine("Q2：計算圖書下個月歸還時間");
 			Demo02();
 			Console.WriteLine();
+			Console.WriteLine("Q3：取得本月一日");
 			Demo03();
 			Console.WriteLine();
+			Console.WriteLine("Q4：取得本月最後一天");
 			Demo04();
 			Console.WriteLine();
+			Console.WriteLine("Q5：列出指定年份的每一個星期日");
 			Demo05();
 			Console.WriteLine();
+			Console.WriteLine("Q6：根據日期, 傳回今天是本月的上旬, 中旬或下旬");
 			Demo06();
 			Console.WriteLine();
+			Console.WriteLine("Q7：根據不同時間, 傳回不同問安方式");
 			Demo07();
 
 			Console.Read();
@@ -30,10 +37,12 @@ namespace Exec_DateTime01
 		{
 			//EXEC - 1
 			DateTime thedate = DateTime.Today;
-			Console.Write("請輸入幾天後還書：");
-			string dday = Console.ReadLine();
-			int ddd = Convert.ToInt32(dday);
-			DateTime newdate = thedate.AddDays(ddd);
+			//Console.Write("請輸入幾天後還書：");
+			//string dday = Console.ReadLine();
+			//int ddd = Convert.ToInt32(dday);
+			//DateTime newdate = thedate.AddDays(ddd);
+
+			DateTime newdate = thedate.AddDays(3);
 
 			Console.WriteLine($"還書日期是{newdate:yyyy-MM-dd}");
 
@@ -82,7 +91,6 @@ namespace Exec_DateTime01
 				tttt = tttt.AddDays(1);
 
 			Console.WriteLine("所有週日的日期");
-			Console.WriteLine(tttt.ToString("yyyy-MM-dd"));
 
 			int i = 7;
 			while (true)
