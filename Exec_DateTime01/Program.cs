@@ -19,6 +19,10 @@ namespace Exec_DateTime01
 			Demo04();
 			Console.WriteLine();
 			Demo05();
+			Console.WriteLine();
+			Demo06();
+			Console.WriteLine();
+			Demo07();
 
 			Console.Read();
 		}
@@ -91,6 +95,34 @@ namespace Exec_DateTime01
 				else
 					break;
 			}
+		}
+		private static void Demo06()
+		{
+			//EXEC - 6
+			DateTime dt = DateTime.Today;
+
+			if (dt.Day <= 10)
+				Console.WriteLine("現在是" + dt.ToString("MM") + "的上旬");
+			else if (dt.Day > 10 && dt.Day <= 20)
+				Console.WriteLine("現在是" + dt.ToString("MM") + "的中旬");
+			else
+				Console.WriteLine("現在是" + dt.ToString("MM") + "的下旬");
+
+			//throw new NotImplementedException();
+		}
+		private static void Demo07()
+		{
+			//EXEC - 7
+			DateTime dt = DateTime.Now;
+
+			if (dt.Hour >= 0 && dt.Hour < 12)
+				Console.WriteLine("早安");
+			else if (dt.Hour >= 12 && dt.Hour < 18)
+				Console.WriteLine("午安");
+			else
+				Console.WriteLine("晚安");
+
+			//throw new NotImplementedException();
 		}
 	}
 }
