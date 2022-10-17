@@ -109,6 +109,8 @@ namespace Exec_DateTime01
 				Console.WriteLine("現在是" + dt.ToString("MM") + "的下旬");
 
 			//throw new NotImplementedException();
+
+
 		}
 		private static void Demo07()
 		{
